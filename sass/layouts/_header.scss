@@ -1,0 +1,39 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+header {
+	.nav {
+		@include mixins.displayFlex(row, space-between, center);
+		margin: 0 auto;
+		padding: 2rem;
+		border-bottom: 2px solid black;
+		a {
+			text-decoration: none;
+			color: black;
+			&:hover {
+			}
+			&:active {
+			}
+			&:focus {
+			}
+		}
+		&__container {
+			@include mixins.displayFlex(row, space-evenly);
+			list-style: none;
+		}
+		&__list-item {
+			font-size: 2rem;
+			font-weight: 700;
+			&--link {
+				display: inline-block;
+				border-bottom: 2px solid transparent;
+				transition: border variables.$standard-transition;
+				padding: 2rem;
+				&:hover,
+				&:active,
+				&:focus {
+					border-bottom: 2px solid black;
+				}
+			}
+		}
+	}
+}

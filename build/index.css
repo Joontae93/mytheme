@@ -1,0 +1,126 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/main.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600&display=swap);
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/main.scss (1) ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+main {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body,
+.subheadline {
+  font-family: "Lusitana", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.headline,
+.nav {
+  font-family: "Raleway", serif;
+}
+
+/*
+Desktop - 1200px
+Laptop - 979px
+Tablet - 767px
+iPhone - 480px
+Tiny - 320px
+*/
+header .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+  border-bottom: 2px solid black;
+}
+header .nav a {
+  text-decoration: none;
+  color: black;
+}
+header .nav__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  list-style: none;
+}
+header .nav__list-item {
+  font-size: 2rem;
+  font-weight: 700;
+}
+header .nav__list-item--link {
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease;
+  padding: 2rem;
+}
+header .nav__list-item--link:hover, header .nav__list-item--link:active, header .nav__list-item--link:focus {
+  border-bottom: 2px solid black;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer #copyright {
+  width: 88%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6.5rem 0;
+}
+footer #copyright p {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+main .hero {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .hero .headline {
+  font-size: calc(4.8rem + 1vw);
+}
+main .hero .subheadline {
+  font-size: calc(2.4rem + 1vw);
+}
+
+/*# sourceMappingURL=index.css.map*/

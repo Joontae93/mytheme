@@ -1,0 +1,15 @@
+{
+  "name": "my-wordpress-theme",
+  "version": "1.0.0",
+  "description": "My custom wordpress theme for my personal site",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "author": "KJ Roelke",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.4.0"
+  }
+}

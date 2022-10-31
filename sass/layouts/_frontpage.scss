@@ -1,0 +1,43 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+main {
+	@include mixins.displayFlex(column, flex-start, stretch);
+	.hero {
+		height: 60vh;
+		@include mixins.displayFlex(column, center, center);
+		.headline {
+			font-size: calc(4.8rem + 1vw);
+		}
+		.subheadline {
+			font-size: calc(2.4rem + 1vw);
+		}
+	}
+	#about.two-col {
+		.col {
+			figure {
+			}
+			.headline {
+			}
+			.subheadline {
+			}
+			.text {
+			}
+			.btn {
+				&:hover {
+				}
+				&:active {
+				}
+				&:focus {
+				}
+			}
+		}
+	}
+	#work {
+		h2 {
+		}
+	}
+	#blog {
+		h2 {
+		}
+	}
+}
