@@ -22,7 +22,8 @@ body {
   font-size: 1.6rem;
 }
 
-main {
+main,
+.the-content {
   width: 88%;
   max-width: 1200px;
   margin: 0 auto;
@@ -121,6 +122,38 @@ main .hero .headline {
 }
 main .hero .subheadline {
   font-size: calc(2.4rem + 1vw);
+}
+.about .header {
+  padding: 6.5rem 0;
+  border-bottom: 2px solid black;
+}
+.about .header .headline {
+  font-size: calc(4.8rem + 1vw);
+}
+.about .header .subheadline {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.about .faq {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 6.5rem;
+}
+.about .faq__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about .faq__question {
+  margin-top: 6rem;
+}
+.about .faq__answer {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map*/

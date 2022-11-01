@@ -9,12 +9,6 @@ header {
 		a {
 			text-decoration: none;
 			color: black;
-			&:hover {
-			}
-			&:active {
-			}
-			&:focus {
-			}
 		}
 		&__container {
 			@include mixins.displayFlex(row, space-evenly);
