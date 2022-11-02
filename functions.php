@@ -1,5 +1,6 @@
 <?
 
+/** Styles 'n' Scripts */
 function enqueue_styles() {
     wp_enqueue_style('kj-Styles', get_stylesheet_directory_uri() . '/build/index.css', array(), '1.0');
     wp_enqueue_script('kj-data', get_stylesheet_directory_uri() . '/build/index.js', array(), '1.0', true);
@@ -11,12 +12,19 @@ function enqueue_styles() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
 
+/** Custom Filters */
+add_filter('excerpt_length', function ($length) {
+    return 30;
+}, PHP_INT_MAX);
+
+/** Custom Supports */
 function myThemeSupports() {
     add_theme_support('post-formats', array('link', 'standard', 'video', 'audio'));
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'myThemeSupports');
 
+/** Custom Post Types */
 function my_cpts() {
     register_post_type(
         'work',

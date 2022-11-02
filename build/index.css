@@ -16,17 +16,18 @@
 html {
   font-size: 62.5%;
 }
-
-body {
+html body {
   box-sizing: border-box;
   font-size: 1.6rem;
 }
-
-main,
-.the-content {
+html body main,
+html body .the-content {
   width: 88%;
   max-width: 1200px;
   margin: 0 auto;
+}
+html body a {
+  text-decoration: none;
 }
 
 body,
@@ -43,6 +44,11 @@ h6,
 .headline,
 .nav {
   font-family: "Raleway", serif;
+}
+
+.title {
+  margin-top: 4rem;
+  font-size: calc(4.8rem + 1vw);
 }
 
 /*
@@ -154,6 +160,45 @@ main .hero .subheadline {
 }
 .about .faq__answer {
   margin-top: 1rem;
+}
+
+.post-card {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: white;
+  transition: all 0.3s ease;
+  flex: 1 1 28rem;
+  cursor: pointer;
+}
+.post-card:hover, .post-card:active, .post-card:focus {
+  background-color: black;
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 4px black;
+}
+.post-card:hover a, .post-card:active a, .post-card:focus a {
+  color: white;
+}
+.post-card__container {
+  margin: 6.5rem 0;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.post-card__container li {
+  height: 40rem;
+}
+.post-card__title {
+  font-size: 3.2rem;
+}
+.post-card__excerpt {
+  margin-top: 2rem;
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=index.css.map*/

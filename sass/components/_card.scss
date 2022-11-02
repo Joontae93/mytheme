@@ -1,0 +1,38 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+.post-card {
+	border: 2px solid black;
+	border-radius: 1rem;
+	padding: 2rem;
+	background-color: white;
+	transition: all 0.3s ease;
+	flex: 1 1 28rem;
+	cursor: pointer;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: black;
+		transform: translateY(-5px);
+		box-shadow: 2px 2px 4px black;
+		a {
+			color: white;
+		}
+	}
+	&__container {
+		margin: 6.5rem 0;
+		position: relative;
+		list-style: none;
+		@include mixins.displayFlex(row, space-around);
+		gap: 2rem;
+		& li {
+			height: 40rem;
+		}
+	}
+	&__title {
+		font-size: 3.2rem;
+	}
+	&__excerpt {
+		margin-top: 2rem;
+		font-size: 1.8rem;
+	}
+}
