@@ -103,7 +103,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/utilities */ "./src/modules/utilities.js");
 
 
+console.log('hello from global.js');
 }();
 /******/ })()
 ;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=global.js.map
