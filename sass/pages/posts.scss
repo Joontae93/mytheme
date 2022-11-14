@@ -1,13 +1,15 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 .single {
-	@include mixins.displayFlex;
+	@include mixins.displayFlex();
 	gap: 2rem;
+	margin: 4rem auto;
 	@include mixins.respond(iPhone) {
 		display: block;
 	}
 	.the-post {
 		flex: 1 1 calc(60% - 2rem);
+		max-width: 700px;
 		&__featured-image {
 			max-width: 50vw;
 			img {
@@ -22,8 +24,14 @@
 	}
 	.sidebar {
 		flex: 1 1 calc(40% - 2rem);
+		position: sticky;
+		top: 10%;
+		background-color: white;
 		border: 2px solid variables.$color-grey--dark;
 		border-radius: 1rem;
 		padding: 1rem;
+		@include mixins.respond(Tablet) {
+			position: relative;
+		}
 	}
 }

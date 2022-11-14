@@ -5,12 +5,13 @@ var __webpack_exports__ = {};
   \*****************************/
 class Post {
   #theSidebarMarkup = `<aside class="sidebar">
-        <h3 class="sidebar__header">In This article:</h3>
-        <ul class="article-headers"></ul>
+        	<h3 class="sidebar__header">In This article:</h3>
+        	<ul class="article-headers" role="list" id="tableOfContents"></ul>
     </aside>`;
   #thePost = document.querySelector('.the-post');
   #theHeaders = null;
   #theAnchoredHeaders;
+  #sidebar;
   constructor() {
     this.#getHeaders();
   }
@@ -20,8 +21,9 @@ class Post {
   createSidebar() {
     if (this.#theHeaders != null) {
       this.#anchorHeaders();
-      this.#generateSidebar();
+      this.#displaySidebar();
       this.#displayTableOfContents();
+      this.#handleWindowResize();
     }
   }
   #anchorHeaders() {
@@ -31,17 +33,37 @@ class Post {
       return el;
     });
   }
-  #generateSidebar() {
-    this.#thePost.insertAdjacentHTML(this.#checkForMobileScreenSize(), this.#theSidebarMarkup);
+  #displaySidebar() {
+    const article = document.querySelector('.single');
+    article.insertAdjacentHTML(this.#checkForMobileScreenSize(), this.#theSidebarMarkup);
+    this.#setSidebar();
   }
   #checkForMobileScreenSize() {
-    return window.innerWidth > 390 ? 'beforeend' : 'afterbegin';
+    return window.innerWidth > 700 ? 'beforeend' : 'afterbegin';
+  }
+  #setSidebar() {
+    this.#sidebar = document.querySelector('.sidebar');
   }
   #displayTableOfContents() {
-    const tableOfContents = document.querySelector('.article-headers');
+    const tableOfContents = document.getElementById('tableOfContents');
     this.#theAnchoredHeaders.forEach(header => {
       tableOfContents.insertAdjacentHTML('beforeend', `<li><a href="#${header.id}">${header.innerText}</a></li>`);
     });
+  }
+  #handleWindowResize() {
+    window.addEventListener('resize', ev => {
+      if (ev.target.innerWidth < 700) {
+        this.#sidebar.remove();
+        this.#displayMobileSidebar();
+        this.#displayTableOfContents();
+      }
+    }, {
+      once: true
+    });
+  }
+  #displayMobileSidebar() {
+    const image = this.#thePost.querySelector('.the-post__featured-image');
+    image.insertAdjacentHTML('afterend', this.#theSidebarMarkup);
   }
 }
 const thePost = new Post();

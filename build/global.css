@@ -190,6 +190,7 @@ main .hero .subheadline {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
+  margin: 4rem auto;
 }
 @media only screen and (max-width: 30em) {
   .single {
@@ -203,6 +204,7 @@ main .hero .subheadline {
 }
 .single .the-post {
   flex: 1 1 calc(60% - 2rem);
+  max-width: 700px;
 }
 .single .the-post__featured-image {
   max-width: 50vw;
@@ -218,9 +220,22 @@ main .hero .subheadline {
 }
 .single .sidebar {
   flex: 1 1 calc(40% - 2rem);
+  position: sticky;
+  top: 10%;
+  background-color: white;
   border: 2px solid #545454;
   border-radius: 1rem;
   padding: 1rem;
+}
+@media only screen and (max-width: 48em) {
+  .single .sidebar {
+    position: relative;
+  }
+}
+@media only screen and (max-width: Tablet) {
+  .single .sidebar {
+    position: relative;
+  }
 }
 
 .post-card {
